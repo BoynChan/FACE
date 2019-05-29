@@ -199,4 +199,6 @@ function listWorker(data) {
 
         tbody.appendChild(tr);
     }
+    $('.tablelist tbody tr:odd').addClass('odd');
+
 }

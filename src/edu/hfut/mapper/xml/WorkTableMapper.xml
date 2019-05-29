@@ -61,6 +61,7 @@
             worker_group = #{workerGroup},
             worker_position = #{workerPosition},
             age = #{age},
+            email=#{email},
             gender = #{gender},
             photo_name = #{photoName},
             photo_path = #{photoPath},

@@ -201,12 +201,13 @@ function formSubmit(){
     form.append("workerPosition",$("#update_duty").val());
     form.append("email",$("#update_email").val());
     form.append("id",$("#update_id").val());
-    $.ajax("http://114.213.210.211:8080/face/update",
+    $.ajax("http://114.213.210.211:8080/api/update",
         {
+            type: 'POST',
+            data: form,
+            async: false,
+            cache: false,
             contentType: false,
-            async: true,
-            type:"POST",
-            data:form,
             processData: false,
             success: function (data) {
                 location.reload();
@@ -351,4 +352,5 @@ function listWorker(data) {
         tr.appendChild(td9);
         tbody.appendChild(tr);
     }
+    $('.tablelist tbody tr:odd').addClass('odd');
 }

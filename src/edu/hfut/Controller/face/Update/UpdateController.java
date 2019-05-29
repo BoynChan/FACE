@@ -30,7 +30,7 @@ import java.util.Map;
  * 更新控制器
  */
 @Controller
-@RequestMapping("/face")
+@RequestMapping("/api")
 public class UpdateController {
 	@Autowired
 	private WorkTableService workTableService;
