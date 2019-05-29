@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hfut.mapper.WorkTableMapper">
+    <!--    getWorkerInfo的sql语句 -->
+    <select id="getWorkerInfoById" resultType="workerInfo" parameterType="int">
+        select id, worker_name, gender, age, phone, email, worker_group, worker_position, photo_path, photo_name from worker_table where id=#{id};
+    </select>
+
+    <select id="getWorkerInfoBySearch" resultType="workerInfo" parameterType="workerInfo">
+        select id, worker_name, gender, age, phone, email, worker_group, worker_position, photo_path, photo_name
+        from worker_table
+        where
+        worker_name=${workerName};
+    </select>
+
+    <select id="getWorkerListBySearch" resultType="workerInfo" parameterType="string">
+        select id, worker_name, gender, age, phone, email, worker_group, worker_position, photo_path, photo_name
+        from worker_table
+        where
+        worker_name like #{workerName}
+        and
+        phone like #{phone};
+    </select>
+
+
+    <select id="getWorkerNameById" parameterType="int" resultType="string">
+        select worker_name from worker_table where id=#{id};
+    </select>
+
+    <select id="getWorkerList" resultType="workerInfo" parameterType="int">
+        select id, worker_name, gender, age, phone, email, worker_group, worker_position, photo_path, photo_name from worker_table order by id LIMIT 10 OFFSET #{offset} ;
+    </select>
+
+    <select id="getAllWorkerList" resultType="workerInfo">
+        select id, worker_name, gender, age, phone, email, worker_group, worker_position, photo_path, photo_name from worker_table order by id;
+    </select>
+
+    <select id="getTotalNumber" resultType="int">
+        select count(*)  from worker_table;
+    </select>
+
+    <select id="getCurrentId" resultType="Integer">
+        select id from worker_table order by id DESC limit 1;
+    </select>
+
+
+    <select id="getPhotoPathById" resultType="string" parameterType="int">
+        select photo_path from worker_table where id=#{id};
+    </select>
+
+
+    <select id="getPhotoNameById" resultType="string" parameterType="int">
+        select photo_name from worker_table where id=#{id};
+    </select>
+
+    <update id="updateWorkerInfo" parameterType="workerInfo">
+        update worker_table
+        set worker_name = #{workerName},
+            worker_group = #{workerGroup},
+            worker_position = #{workerPosition},
+            age = #{age},
+            gender = #{gender},
+            photo_name = #{photoName},
+            photo_path = #{photoPath},
+            phone = #{phone}
+        where id=#{id};
+    </update>
+
+    <delete id="deleteWorkerInfo" parameterType="int">
+        delete from worker_table
+        where id = #{id};
+    </delete>
+
+    <insert id="insertWorkerInfo" parameterType="workerInfo" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO worker_table(worker_name,gender,photo_path,photo_name,worker_group,worker_position,age,phone,email)
+        value (#{workerName},#{gender},#{photoPath},#{photoName},#{workerGroup},#{workerPosition},#{age},#{phone},#{email});
+    </insert>
+</mapper>

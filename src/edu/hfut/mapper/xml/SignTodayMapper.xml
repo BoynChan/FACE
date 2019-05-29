@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hfut.mapper.SignTodayTableMapper">
+    <insert id="insertSign" parameterType="signTable">
+        INSERT INTO sign_today_table(worker_id, sign_time) VALUE (#{workerId},#{signTime});
+    </insert>
+
+    <select id="selectSign" parameterType="int" resultType="signTable">
+        SELECT worker_id,sign_time FROM sign_today_table WHERE worker_id=#{worker_id};
+    </select>
+
+    <select id="selectSignList" resultType="signTableToday">
+        select
+            worker_table.id,
+            worker_table.worker_name,
+            worker_table.gender,
+            worker_table.age,
+            worker_table.phone,
+            worker_table.email,
+            worker_table.worker_group,
+            worker_table.worker_position,
+            worker_table.photo_name,
+            sign_today_table.sign_time
+        from worker_table left join sign_today_table
+        on worker_table.id = sign_today_table.worker_id
+        order by worker_table.id;
+    </select>
+
+    <select id="selectSignListBySearch" resultType="signTableToday" parameterType="string">
+        select
+    worker_table.id,
+    worker_table.worker_name,
+    worker_table.gender,
+    worker_table.age,
+    worker_table.phone,
+    worker_table.email,
+    worker_table.worker_group,
+    worker_table.worker_position,
+    worker_table.photo_name,
+    sign_today_table.sign_time
+from
+    worker_table left join sign_today_table
+on
+    worker_table.id = sign_today_table.worker_id
+where
+    worker_name like #{workerName}
+    and
+    phone like #{phone}
+order by worker_table.id;
+    </select>
+
+    <select id="countSign" resultType="int" parameterType="int">
+        select count(*) from sign_today_table where worker_id=#{workerId}
+    </select>
+
+
+</mapper>

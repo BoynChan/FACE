@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hfut.mapper.SignTotalTableMapper">
+    <insert id="insertSign" parameterType="signTable">
+        INSERT INTO sign_total_table(worker_id, sign_time) VALUE (#{workerId},#{signTime});
+    </insert>
+
+    <select id="selectSignList" parameterType="int" resultType="string">
+        SELECT sign_time FROM sign_total_table WHERE worker_id=#{workerId} LIMIT 15;
+    </select>
+
+
+</mapper>

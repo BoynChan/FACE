@@ -1,0 +1,73 @@
+
+.two {
+    text-align: left;
+    /*margin-left: 5px;*/
+    margin-top: 10px;
+    margin-left: 50px;
+    height: 45px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.two span {
+    margin-left: 5px;
+    line-height: 45px;
+    font-size: 24px;
+}
+
+.button {
+    margin-left: 15px;
+    width: 50px;
+    height: 35px;
+    display: inline-block;
+    background-color: deepskyblue;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.three {
+    display: flex;
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.three span {
+    font-size: 16px;
+}
+
+.three button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: auto;
+
+    text-decoration: none;
+    color: initial;
+}
+
+.three input {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.leftbox {
+    width: 60%;
+    text-align: left;
+    position: absolute;
+    margin-left: 40px;
+}
+
+.rightbox {
+    width: 40%;
+    margin-top: 150px;
+    margin-left: 60%;
+    position: absolute;
+}
+
+.table1 {
+    margin-left: 180px;
+}

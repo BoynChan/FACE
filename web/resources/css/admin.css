@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+}
+
+img {
+    border: none;
+}
+
+* {
+    font-family: '微软雅黑';
+    font-size: 12px;
+    color: #626262;
+}
+
+dl, dt, dd {
+    display: block;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.conta {
+
+}
+
+.rightsidebar_box .conta1 {
+    position: relative;
+}
+
+.left_box {
+    width: 60%;
+    text-align: left;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.right_box {
+    margin-left: 75%;
+    position: absolute;
+}
+
+.right_box .right1 {
+    margin-top: 80px;
+}
+
+.right_box .right2 {
+    font-size: 20px;
+
+}
+
+.leftsidebar_box {
+    float: left;
+    width: 200px;
+    height: 1000px;
+    margin-top: 100px;
+    background-color: #3992d0;
+}
+
+.line {
+    height: 150px;
+    width: 100%;
+}
+
+.line .avtor a {
+    display: block;
+    padding-top: 97px;
+    width: 100%;
+    background: url(../images/headface_remit.png) repeat-x;
+    background-size: 130px 130px;
+}
+
+.line .avtor a span {
+    display: block;
+    width: 130px;
+    height: 55px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+}
+
+.leftsidebar_box dt {
+    padding-left: 40px;
+    padding-right: 10px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: #f5f5f5;
+    font-size: 14px;
+    position: relative;
+    line-height: 48px;
+    cursor: pointer;
+}
+
+.leftsidebar_box dd {
+    background-color: #317eb4;
+    padding-left: 40px;
+}
+
+.leftsidebar_box dd a {
+    color: #f5f5f5;
+    line-height: 20px;
+}
+
+.leftsidebar_box dt img {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.system_log dt {
+    background-image: url(../images/left/system.png);
+    margin-top: 80px;
+    font-size: 16px;
+}
+
+.custom dt {
+    background-image: url(../images/left/custom.png);
+    margin-top: 80px;
+    font-size: 16px;
+}
+
+.channel dt {
+    background-image: url(../images/left/channel.png);
+    margin-top: 80px;
+    font-size: 16px;
+}
+
+.rightsidebar_box {
+    width: 87%;
+    margin-left: 200px;
+    position: absolute;
+    box-sizing: border-box;
+
+}
+
+.rightsiderbar_box .conta1 {
+    position: relative;
+}
+
+.rightsidebar_box .right_top .one {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 30px;
+
+
+}
+
+.rightsidebar_box .right_section {
+    width: 100%;
+    height: 560px;
+}
+
+.rightsidebar_box .right_last {
+    width: 100%;
+    height: 30px;
+
+
+}
+
+.rightsiderbar_box .left_ {
+    height: 600px;
+    width: 50%;
+    /*position:relative;*/
+    float: left;
+}
+
+.tab1 {
+    margin-top: 5px;
+}
+
+.tab1 td {
+    padding: 5px 0;
+}
+
+.tab2 th {
+
+    font-weight: normal;
+    height: 29px;
+    line-height: 29px;
+    background: #e5f0ff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab2 td {
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}

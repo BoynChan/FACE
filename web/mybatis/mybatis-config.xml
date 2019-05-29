@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://github.com/mybatis/mybatis-3/blob/master/src/main/java/org/apache/ibatis/builder/xml/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="useGeneratedKeys" value="true"/>
+        <!--        支持数据库中标记的Auto Increment-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--        支持将根据驼峰命名法来映射       -->
+    </settings>
+    <typeAliases>
+        <typeAlias alias="workerInfo" type="edu.hfut.pojo.WorkerInfo"/>
+        <typeAlias alias="signTable" type="edu.hfut.pojo.SignTable"/>
+        <typeAlias type="edu.hfut.pojo.User" alias="user"/>
+        <typeAlias type="edu.hfut.pojo.SignTableToday" alias="signTableToday"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper resource="edu/hfut/mapper/xml/WorkTableMapper.xml"/>
+        <mapper resource="edu/hfut/mapper/xml/SignTodayMapper.xml"/>
+        <mapper resource="edu/hfut/mapper/xml/SignTotalMapper.xml"/>
+        <mapper resource="edu/hfut/mapper/xml/UserMapper.xml"/>
+    </mappers>
+</configuration>
