@@ -141,13 +141,6 @@ function listWorker(data) {
         tr.className = "text-center";
         tr.id = "tr-" + data.workerList[i].id;
 
-        var td1 = document.createElement("td");
-        var input = document.createElement("input");
-        input.type = "checkbox";
-        input.name = data.workerList[i].id;
-        td1.appendChild(input);
-        tr.appendChild(td1);
-
         var td2 = document.createElement("td");
         if (data.workerList[i].workerName === "") td2.innerHTML = "无";
         else td2.innerHTML = data.workerList[i].workerName;

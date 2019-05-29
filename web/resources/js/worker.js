@@ -35,7 +35,7 @@ function info(id) {
                 var info = document.getElementById("info_modal");
                 info.innerHTML="";
                 var img = document.createElement("img");
-                img.style="width:200px;height:200px;margin-left:30%";
+                img.style = "width:150px;height:150px;margin-left:30%;margin-top:5px;margin-bottom:3px";
                 img.setAttribute("src","/resources/photo/"+data.photoName);
                 info.appendChild(img);
 

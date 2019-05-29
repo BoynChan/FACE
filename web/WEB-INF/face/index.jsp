@@ -18,10 +18,12 @@
         <li><a href="#">首页</a></li>
     </ul>
 </div>
+
 <div class="mainindex">
     <div class="welinfo" style="margin-top: 2%;margin-left: 30%;">
         <span><img src="/images/sun.png" alt="天气"/></span>
-        <b style="font-size: 26px; font-family: 宋体; ">Admin早上好，欢迎使用信息管理系统</b>
+        <b style="font-size: 26px; font-family: 宋体; ">Admin早上好，欢迎使用信息管理系统!</b>
+        <%--//TODO:根据Cookie获取当前登陆用户姓名--%>
     </div>
 </div>
 </body>

@@ -39,6 +39,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
     <ul class="placeul">
         <li><a href="/face/index">首页</a></li>
         <li><a href="/face/register">员工信息注册</a></li>
+        <li><a href="#">基本内容</a></li>
     </ul>
 </div>
 <div class="formbody">
@@ -48,11 +49,11 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
             <div class="leftbox">
 
                 <div class="form-group act2" style="margin-top: 30px;/*margin-left: 100px;width: 400px;*/">
-                    <label for="workername" style="font-size:18px;">姓名:</label>
+                    <label for="workername" style="font-size:16px;">姓名:</label>
                     <input type="text" class="form-control" id="workerName" name="workerName" placeholder="请输入姓名"/>
                 </div>
                 <div class="form-group act2" style="margin-top: 20px;/*margin-left: 100px;width:400px*/">
-                    <label for="gender" style="font-size:18px;">性别:</label>
+                    <label for="gender" style="font-size:16px;">性别:</label>
                     <select class="form-control" name="gender" id="gender">
                         <option style="display:none">请选择性别</option>
                         <option>男</option>
@@ -61,20 +62,20 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                     <!--<input type="text" class="form-control" id="gender" name="gender" placeholder="请输入性别"/>-->
                 </div>
                 <div class="form-group act2" style="margin-top: 20px;/*margin-left: 100px;width: 400px;*/">
-                    <label for="age" style="font-size:18px;">年纪:</label>
+                    <label for="age" style="font-size:16px;">年纪:</label>
                     <input type="text" class="form-control" id="age" name="age" placeholder="请输入年纪"/>
                 </div>
                 <div class="form-group act2" style="margin-top: 20px;/*margin-left: 100px;width: 400px;*/">
-                    <label for="phone_number" style="font-size:18px;">手机号码:</label>
+                    <label for="phone_number" style="font-size:16px;">手机号码:</label>
                     <input type="tel" class="form-control" id="phone_number" name="phone"
                            placeholder="请输入手机号码"/>
                 </div>
                 <div class="form-group act2" style="margin-top: 20px;/*margin-left: 100px;width: 400px;*/">
-                    <label for="email" style="font-size:18px;">邮箱:</label>
+                    <label for="email" style="font-size:16px;">邮箱:</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="请输入邮箱"/>
                 </div>
                 <div class="form-group act2" style="margin-top: 20px;/*margin-left: 100px;width: 400px;*/">
-                    <label for="workerGroup" style="font-size:18px;">就职部门:</label>
+                    <label for="workerGroup" style="font-size:16px;">就职部门:</label>
                     <select class="form-control" name="workerGroup" id="workerGroup">
                         <option style="display:none">请选择就职部门</option>
                         <option>开发组</option>
@@ -84,12 +85,12 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                     <!--<input type="text" class="form-control" id="group" name="group" placeholder="请输入所属组别"/>-->
                 </div>
                 <div class="form-group act2" style="margin-top: 20px;/*margin-left: 100px;width: 400px;*/">
-                    <label for="email" style="font-size:18px;">职务:</label>
+                    <label for="email" style="font-size:16px;">职务:</label>
                     <input type="text" class="form-control" id="duty" name="workerPosition" placeholder="请输入职务"/>
                 </div>
                 <div class="form-group" style="margin-left: 75%;margin-top: 70px;">
                     <button type="submit" class="btn btn-sm btn-success" id="register_button"
-                            style="font-size: 20px;" >注册
+                            style="font-size: 20px;padding: 0">注册
                     </button>
                 </div>
             </div>
